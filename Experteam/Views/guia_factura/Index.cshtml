@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Experteam.guia_factura>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idguia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idpago)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.factura.Establecimiento)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idguia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idpago)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.factura.Establecimiento)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id_guia_factura }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id_guia_factura }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.id_guia_factura })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,42 @@
+﻿@model Experteam.guia_factura
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>guia_factura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idguia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idguia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idpago)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idpago)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.factura.Establecimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.factura.Establecimiento)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_guia_factura }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

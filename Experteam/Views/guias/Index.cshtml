@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Experteam.guia>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Crear Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroGuía)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaEnvio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaisOrigen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreRemitente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionRemitente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonoRemitente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailRemitente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaisDestino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonoDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailDestinatario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Total)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroGuía)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaEnvio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaisOrigen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreRemitente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionRemitente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoRemitente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailRemitente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaisDestino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailDestinatario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdGuia }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.IdGuia }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.IdGuia })
+        </td>
+    </tr>
+}
+
+</table>

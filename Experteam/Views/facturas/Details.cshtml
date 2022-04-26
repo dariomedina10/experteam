@@ -1,0 +1,74 @@
+﻿@model Experteam.factura
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>factura</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Establecimiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Establecimiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PuntoEmision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PuntoEmision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Secuencial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Secuencial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaEmision)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaEmision)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Subtotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Subtotal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Impuesto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Impuesto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdFactura }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
